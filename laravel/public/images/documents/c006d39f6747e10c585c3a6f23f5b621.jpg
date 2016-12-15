@@ -1,0 +1,293 @@
+	<div class="panel-group" style="display:none" id="group_upload">
+
+	  <div class="panel panel-default">
+
+		<div class="panel-body scroll_horiz">
+
+		<b>{{Lang::get('master.parameters_of_group_upload')}}</b> <br/><p class="hr-add"/>
+
+			<table class="tablecomp" width="100%" border="0" id="dynatable">
+
+			<thead>
+
+			<tr>
+
+				<td><button type="button" onclick="addRow()" class="add bbutton" style="font-size:19px;"> + </button></td>
+
+			</tr>
+
+			  <tr>
+
+				<td class="tdcomp" width="8%"><strong>{{Lang::get('master.type')}}</strong></td>
+
+				<td class="tdcomp" width="8%"><strong>{{Lang::get('master.rooms')}}</strong></td>
+
+				<td class="tdcomp" width="8%"><strong>{{Lang::get('master.bathrooms')}}</strong></td>
+
+				<td class="tdcomp" width="8%"><strong>{{Lang::get('master.floors')}}</strong></td>
+
+				<td class="tdcomp" width="8%"><strong>{{Lang::get('master.floor')}}</strong></td>
+
+				<td class="tdcomp" ><strong>{{Lang::get('master.total_floors')}}</strong></td>
+
+				<td class="tdcomp" ><strong>{{Lang::get('master.login')}}</strong></td>
+
+				<td class="tdcomp" ><strong>{{Lang::get('master.number')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.land')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.basement')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.attic')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.garage')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.res_area')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.common_parts')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.built_area')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.price')}} м2</strong></td>
+
+				<td ><strong>{{Lang::get('master.price')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.currency')}}</strong></td>
+
+				<td ><strong>{{Lang::get('master.furnishing')}}</strong></td>
+
+
+
+			  </tr>
+
+			</thead>
+
+			<tbody>
+
+			<tr class="prototype">
+
+			<td>
+
+			<select name="group_construction_id[]" style="width: 117px; padding: 5px;">
+
+			<option value="">{{Lang::get('master.choose')}}</option>
+
+				@foreach($constructions as $construction)
+
+					<option value="{{$construction->id}}">{{Lang::get('master.'.$construction->name)}}</option>
+
+				@endforeach
+
+			</select>
+
+			</td>
+
+			<td>
+
+				<select name="group_rooms[]" onchange="setRooms(this.value)">
+
+					<option value="">{{Lang::get('master.choose')}}</option>
+
+
+
+					<?php
+
+						$i=1;
+
+						while($i <= 6) {
+
+							if($i > 5) {
+
+								echo '<option value="multiroom">+5</option>';
+
+							} else {
+
+								echo '<option value="'.$i.'">'.$i.'</option>';
+
+							}
+
+						$i++;
+
+						}
+
+					?>
+
+				</select>
+
+			</td>
+
+			<td>
+
+				<select name="group_bathrooms[]" onchange="setBathrooms(this.value)">
+
+					<option value="">{{Lang::get('master.choose')}}</option>
+
+					<?php
+
+						$i=1;
+
+						while($i <= 4) {
+
+							if($i > 3) {
+
+								echo '<option value="multiroom">+3</option>';
+
+							} else {
+
+								echo '<option value="'.$i.'">'.$i.'</option>';
+
+							}
+
+						$i++;
+
+						}
+
+					?>
+
+				</select>
+
+			</td>
+
+			<td>
+
+				<select name="group_ground_id[]" onchange="setFloor(this.value)">
+
+					<option value="">{{Lang::get('master.choose')}}</option>
+
+					<?php
+
+						$i=1;
+
+						while($i <= 60) {
+
+								echo '<option value="'.$i.'">'.$i.'</option>';
+
+						$i++;
+
+						}
+
+					?>
+
+				</select>
+
+			</td>
+
+			<td>
+
+				<select name="group_floor[]" onchange="setFloors(this.value)">
+
+					<option value="">{{Lang::get('master.choose')}}</option>
+
+					<?php
+
+						$i=1;
+
+						while($i <= 60) {
+
+								echo '<option value="'.$i.'">'.$i.'</option>';
+
+						$i++;
+
+						}
+
+					?>
+
+				</select>
+
+			</td>
+
+			<td>
+
+				<select name="group_floors[]" onchange="setFloors(this.value)">
+
+					<option value="">{{Lang::get('master.choose')}}</option>
+
+					<?php
+
+						$i=1;
+
+						while($i <= 60) {
+
+								echo '<option value="'.$i.'">'.$i.'</option>';
+
+						$i++;
+
+						}
+
+					?>
+
+				</select>
+
+			</td>
+
+			<td><input type="text"  value="" name="group_doorway[]"></td>
+
+			<td><input type="text"  value="" name="group_number[]"></td>
+
+			<td><input type="text"  value="" name="group_land[]"></td>
+
+			<td><input type="text"  value="" name="group_basement[]"></td>
+
+			<td><input type="text"  value="" name="group_ceiling[]"></td>
+
+			<td><input type="text"  value="" name="group_garage[]"></td>
+
+			<td><input type="text"  value="" name="group_res_area[]"></td>
+
+			<td><input type="text"  value="" name="group_common_parts[]"></td>
+
+			<td><input type="text"  value="" name="group_actual_size[]"></td>
+
+			<td><input type="text"  value="" name="group_whole_area[]"></td>
+
+			<td><input type="text"  value="" name="group_price[]"></td>
+
+				<td>
+
+				<select name="group_currency_id[]" onchange="setCurrency(this.value)" >
+
+				<option value="">{{Lang::get('master.choose')}}</option>
+
+				@foreach($currency as $currencis)
+
+					<option value="{{$currencis->currency_id}}">{{$currencis->name}}</option>
+
+				@endforeach
+
+				</select>
+
+			</td>
+
+			<td>
+
+				<input type="text" name="group_furnishing_id">
+
+			</td>
+
+			</tr>
+
+			</tbody> 
+
+			</table>
+
+			<center>
+
+				<div class="table-cell">
+
+					<a href="/public/csv/multi_upload.xls" class="btn btn-info btn-lg">↓ {{Lang::get('master.choose_file')}}</a>
+
+				</div>
+
+				<div class="table-cell">
+
+				<input class="btn btn-success btn-lg" name="csv_file" type="file" id="csv_file" style="height: 35px; width: 169px;" value="Избор на файл" pseudo="-webkit-file-upload-button">
+
+				</div>
+
+			</center>
+
+		</div>
+
+	  </div>
+
+	</div>

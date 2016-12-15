@@ -1,0 +1,91 @@
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.home')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.sell')}}</a>
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.rent')}}</a>
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.accommodation')}}</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.type')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.properties_in_operation')}}</a>
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.properties_under_construction')}}</a>
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.property_project')}}</a>
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.plots_and_land')}}</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.location')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/> {{Lang::get('master.region')}}</a>
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.city')}}</a>
+			<a><input type="checkbox" name="" value=""/>{{Lang::get('master.neighborhood')}}</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.property')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.rooms')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.statut')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.status')}}</div>
+		<div class="dropdown_content">
+			<<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.construction_type')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.heating')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.floor')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.furnishing')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.features')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.area')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>	
+	<div class="dropdown_home">
+		<div class="dropdown_title" >{{Lang::get('master.price')}}</div>
+		<div class="dropdown_content">
+			<a><input type="checkbox" name="" value=""/>asdasdasasd</a>
+		</div>
+	</div>
